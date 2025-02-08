@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
-
+  const [selectedProduct, setSelectedProduct] = useState();
   const [sortOrder, setSortOrder] = useState("asc");
   const [name, setName] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -112,6 +112,7 @@ const Home = () => {
             <div
               key={product.id}
               className="border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => setSelectedProduct(product)}
             >
               <div className="  mb-4">
                 <img
@@ -131,7 +132,7 @@ const Home = () => {
       </div>
 
       {/* Product Modal */}
-      {/* {selectedProduct && (
+      {selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-auto">
             <button
@@ -155,7 +156,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 };
