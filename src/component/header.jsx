@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link,  } from "react-router";
-// import { MdOutlineShoppingCart } from "react-icons/md";
 export const Header = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -16,7 +15,7 @@ export const Header = () => {
         <div className="container">
           <nav>
             <a href="/" className="logo">
-              <img src="src/assets/img/logo.svg" alt="Logo" />
+              <img src="./src/assets/img/logo.svg" alt="Logo" />
             </a>
             <ul className={`navLink ${isNavOpen ? "active" : ""}`}>
               <li>

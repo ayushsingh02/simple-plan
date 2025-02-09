@@ -24,7 +24,7 @@ const Home = () => {
     <DefaultLayout>
       <div>
         <div className="hero">
-          <img className="pt-8" src="./assets/img/banner-2.jpg" alt="" />
+          <img className="pt-8" src="src/assets/img/banner-2.jpg" alt="" />
           <h1 className="hero-text">SimplePlan Mart</h1>
         </div>
         <Products products={products} />
