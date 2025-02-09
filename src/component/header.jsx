@@ -15,7 +15,7 @@ export const Header = () => {
         <div className="container">
           <nav>
             <a href="/" className="logo">
-              <img src="./src/assets/img/logo.svg" alt="Logo" />
+              <img src="/src/assets/img/logo.svg" alt="Logo" />
             </a>
             <ul className={`navLink ${isNavOpen ? "active" : ""}`}>
               <li>
