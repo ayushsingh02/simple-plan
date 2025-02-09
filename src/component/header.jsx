@@ -1,34 +1,50 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link,  } from "react-router";
+// import { MdOutlineShoppingCart } from "react-icons/md";
+export const Header = () => {
 
-const Header = () => {
-  const [products, setProducts] = useState([]);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const getProducts = async () => {
-    try {
-      const products = await axios.get("https://fakestoreapi.com/products");
-      console.log(products?.data);
-      setProducts(products?.data);
-    } catch (error) {
-      console.log(error);
-    }
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
   };
 
-  useEffect(() => {
-    getProducts();
-  }, []);
-  
   return (
     <div>
-      {products?.map((product) => {
-        return <p>{product?.title}</p>;
-      })}
+      <header>
+        <div className="container">
+          <nav>
+            <a href="/" className="logo">
+              <img src="src/assets/img/logo.svg" alt="Logo" />
+            </a>
+            <ul className={`navLink ${isNavOpen ? "active" : ""}`}>
+              <li>
+                <Link href="/" className="active">
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">ABOUT</Link>
+              </li>
+              <li>
+                <a href="#">CONTACT US</a>
+              </li>
+            </ul>
+            {/* <MdOutlineShoppingCart size={30} /> */}
+            <div className="icon" onClick={toggleNav}>
+              {isNavOpen ? <FaTimes size={24} /> : <FaBars size={24} />}{" "}
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section>
+        <div className="container">
+          <div className="content"></div>
+        </div>
+      </section>
     </div>
   );
 };
 
 export default Header;
-
-// fetch('',)
-//             .then(res=>res.json())
-//             .then(json=>console.log(json)),

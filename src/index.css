@@ -1,1 +1,170 @@
 @import "tailwindcss";
+
+
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 0.7rem 0;
+    position: fixed;
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .navLink {
+    display: flex;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.navLink li {
+    list-style: none;
+    margin: 0 0.5rem;
+}
+
+li a {
+    color: #494b50;
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+    display: block;
+    border-radius: 10px;
+}
+
+li a:hover {
+    color: black;
+}
+
+li a.active {
+    color: black;
+}
+
+.content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.content h2 {
+    font-size: 5rem;
+    color: #494b50;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .container .navLink {
+        position: fixed;
+        top: 0;
+        right: -350px;
+        /* Hide the menu off-screen by default */
+        flex-direction: column;
+        justify-content: flex-start;
+        /* Align items at the top */
+        width: 250px;
+        /* Reduced width for better mobile view */
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease-in-out;
+        z-index: 10;
+        padding-top: 4rem;
+        /* Add padding to avoid overlap with the header */
+    }
+
+    .container .navLink.active {
+        right: 0;
+        /* Show the menu when active */
+    }
+
+    .navLink li {
+        margin: 1rem 0;
+    }
+
+    .navLink li a {
+        font-size: 1.2rem;
+    }
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    /* Hidden by default on larger screens */
+    z-index: 20;
+    /* Ensure it's above the navigation menu */
+}
+
+@media (max-width: 768px) {
+    li a {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .icon {
+        display: block;
+        /* Visible on smaller screens */
+    }
+
+    .logo img {
+        max-width: 70%;
+    }
+}
+
+.card {
+    border-radius: 8px;
+    width: 430px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.hero {
+    position: relative;
+    /* text-align: center; */
+    z-index: -1;
+}
+
+.hero-text {
+    font-size: 5rem;
+    color: white;
+    font-weight: 900;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
