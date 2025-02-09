@@ -5,13 +5,18 @@
 a {
     text-decoration: none;
 }
-
+.products-drop select, input{
+border: 2px solid #dddddd;
+border-radius: 8px;
+width: 250px;
+}
 header {
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     padding: 0.7rem 0;
     position: fixed;
     width: 100%;
+    z-index: 9999;
 }
 
 .container {
@@ -89,24 +94,20 @@ li a.active {
         position: fixed;
         top: 0;
         right: -350px;
-        /* Hide the menu off-screen by default */
         flex-direction: column;
         justify-content: flex-start;
-        /* Align items at the top */
         width: 250px;
-        /* Reduced width for better mobile view */
         height: 100vh;
         background-color: #fff;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
         transition: right 0.3s ease-in-out;
         z-index: 10;
         padding-top: 4rem;
-        /* Add padding to avoid overlap with the header */
+
     }
 
     .container .navLink.active {
         right: 0;
-        /* Show the menu when active */
     }
 
     .navLink li {
@@ -122,9 +123,7 @@ li a.active {
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
-    /* Hidden by default on larger screens */
     z-index: 20;
-    /* Ensure it's above the navigation menu */
 }
 
 @media (max-width: 768px) {
@@ -134,17 +133,26 @@ li a.active {
 
     .icon {
         display: block;
-        /* Visible on smaller screens */
     }
 
     .logo img {
         max-width: 70%;
     }
 }
+@media (max-width: 480px) {
+.card{
+    width: 100%;
+}
+.products-drop select, input {
+  
+    width: 90%;
+}
+}
 
 .card {
     border-radius: 8px;
-    width: 430px;
+    width: auto;
+    max-width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
 
@@ -156,7 +164,6 @@ li a.active {
 
 .hero {
     position: relative;
-    /* text-align: center; */
     z-index: -1;
 }
 
@@ -167,4 +174,7 @@ li a.active {
     position: absolute;
     top: 40%;
     left: 15%;
+}
+.card svg{
+    font-size: 30px;
 }

@@ -8,7 +8,7 @@ const ProductCard = ({ product, isFav, markFavrouite, unMarkFavrouite }) => {
 
   return (
     <div key={product?.id} className="card relative p-6 text-center">
-      <span className="absolute top-1 right-1">
+      <span className="absolute top-2 right-2">
         {isFav ? (
           <span
             onClick={() => {

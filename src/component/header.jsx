@@ -15,11 +15,11 @@ export const Header = () => {
         <div className="container">
           <nav>
             <a href="/" className="logo">
-              <img src="/src/assets/img/logo.svg" alt="Logo" />
+              <img src="/assets/img/logo.svg" alt="Logo" />
             </a>
             <ul className={`navLink ${isNavOpen ? "active" : ""}`}>
               <li>
-                <Link href="/" className="active">
+                <Link to="/" className="active">
                   HOME
                 </Link>
               </li>
@@ -27,7 +27,7 @@ export const Header = () => {
                 <Link to="/about">ABOUT</Link>
               </li>
               <li>
-                <a href="#">CONTACT US</a>
+                <Link to="/contact">CONTACT US</Link>
               </li>
             </ul>
             {/* <MdOutlineShoppingCart size={30} /> */}

@@ -49,7 +49,7 @@ export const Products = ({ products }) => {
         ALL PRODUCTS
       </h2>
 
-      <div className="flex flex-wrap gap-4 mb-6 justify-center">
+      <div className="flex flex-wrap gap-4 mb-6 justify-center products-drop">
         <select
           className="border rounded p-2"
           value={selectedCategory}
@@ -67,8 +67,8 @@ export const Products = ({ products }) => {
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
         >
-          <option value="asc">Price: Low to High</option>
-          <option value="desc">Price: High to Low</option>
+          <option value="asc">Ascending</option>
+          <option value="desc">Discending</option>
         </select>
 
         <input
@@ -76,7 +76,8 @@ export const Products = ({ products }) => {
           className="border rounded p-2"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
+       placeholder="Search"
+       />
       </div>
 
       <div className="container">
