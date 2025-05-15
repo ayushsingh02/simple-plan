@@ -22,14 +22,14 @@ const Contact = () => {
                 <div class="p-8">
                
                   <p class="mt-2 text-gray-500">
-                    This is an assignment for{" "}
+                    This is a React Appliction {" "}
                     <span class="font-medium text-red-600">
-                      Simple Plan Media
+                      Simple Mart
                     </span>
                
 </p>
                   <p class="mt-4 text-gray-500">
-                  <strong>ayushsingh.xi@gmail.com</strong>
+                  <strong>code.ayushsingh@gmail.com</strong>
                   </p>
                 </div>
               </div>
