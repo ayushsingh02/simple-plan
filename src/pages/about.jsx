@@ -22,9 +22,9 @@ const About = () => {
                 <div class="p-8">
                
                   <p class="mt-2 text-gray-500">
-                    This is an assignment for{" "}
+                    This is an React Appliction{" "}
                     <span class="font-medium text-red-600">
-                      Simple Plan Media
+                      Simple Mart
                     </span>
                     . The goal of this project is to demonstrate my skills in
                     front-end development.
