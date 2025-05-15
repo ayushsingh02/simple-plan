@@ -22,7 +22,7 @@ const About = () => {
                 <div class="p-8">
                
                   <p class="mt-2 text-gray-500">
-                    This is an React Appliction{" "}
+                    This is a React Appliction{" "}
                     <span class="font-medium text-red-600">
                       Simple Mart
                     </span>
